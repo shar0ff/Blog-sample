@@ -10,6 +10,8 @@
   <%= blog_post.content %>
 <% end %>
 
-<div class="mb-16 mt-16">
-  <%== pagy_nav(@pagy)%>
-</div>
+<% if @pagy.count > @pagy.items %>
+  <div class="mb-16 mt-16">
+    <%== pagy_nav(@pagy)%>
+  </div>
+<% end %>
